@@ -24,13 +24,35 @@ To forecast weekly sales for different retail store-product combinations using m
 - RMSE: 255.10
 - R²: 0.9465
 - MAPE: 0.7773%
+- 
+## 🔍 Visual Comparison
+- All models were evaluated by plotting actual vs. predicted sales.
+- XGBoost produced the most consistent trend matching real sales across various categories.
+- ARIMA and Prophet showed seasonality but lacked in predictive strength for irregular patterns.
+- Naïve baseline failed on dynamic patterns.
 
-## 📊 Business Insights
-- XGBoost outperformed other models in accuracy and generalization.
-- External factors like holidays and oil prices had a noticeable influence on sales patterns.
-- Suggest improved inventory planning and store-level promotions based on weekly demand spikes.
+## 📌 Business Insights
+1. Model Selection for Deployment
+- Use XGBoost for forecasting as it balances speed, accuracy, and interpretability.
+- Avoid using ARIMA/Prophet for short-term planning due to volatility.
 
----
+2. Holiday & Promotion Sensitivity
+- Sales spiked during national holidays and special events.
+- Black Friday, Ecuadorian holidays, and Christmas contributed to large sales jumps.
+- Promotions provided short-term boosts—can be leveraged for clearance or upselling.
+
+3. Oil Price Impact
+- Affected overall cost-sensitive categories indirectly (transportation-heavy).
+
+## 📈 Recommendations
+- 🏪 Inventory Planning: Use forecasts to pre-stock for holidays and weekends.
+- 🎯 Targeted Promotions: Run location-based promotions during off-peak weeks.
+- 📉 Avoid Overfitting: Monitor model performance regularly and retrain quarterly.
+- 🔄 Retrain: Incorporate recent holiday or pricing changes to stay relevant.
+
+## ✅ Conclusion
+- The XGBoost model is production-ready with strong accuracy and business relevance.
+- It can significantly aid retail planning, logistics, and marketing strategies.
 
 ## 🔗 Credits
 Created by Saravanan Palanisamy 
